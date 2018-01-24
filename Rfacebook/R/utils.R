@@ -36,6 +36,8 @@ pageDataToDF <- function(json){
 	df <- data.frame(
 		from_id = unlistWithNA(json, c('from', 'id')),
 		from_name = unlistWithNA(json, c('from', 'name')),
+		name = unlistWithNA(json, 'name'),
+		description = unlistWithNA(json, 'description'),
 		message = unlistWithNA(json, 'message'),
 		created_time = unlistWithNA(json, 'created_time'),
 		type = unlistWithNA(json, 'type'),
