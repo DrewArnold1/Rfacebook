@@ -102,7 +102,7 @@ postDataToDF <- function(json){
 		from_id = json$from$id,
 		from_name = json$from$name,
 		name = ifelse(!is.null(json$name),json$name, NA),
-		description = ifelse(!is.null(json$description),json$description, NA)
+		description = ifelse(!is.null(json$description),json$description, NA),
 		story = ifelse(!is.null(json$story),json$story, NA),
 		message = ifelse(!is.null(json$message),json$message, NA),
 		created_time = json$created_time,
