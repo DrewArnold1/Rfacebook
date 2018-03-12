@@ -2,6 +2,7 @@ searchDataToDF <- function(json){
 	df <- data.frame(
 		from_id = unlistWithNA(json, c('from', 'id')),
 		from_name = unlistWithNA(json, c('from', 'name')),
+		parent_id = unlistWithNA(json, 'parent_id'),
 		message = unlistWithNA(json, 'message'),
 		created_time = unlistWithNA(json, 'created_time'),
 		type = unlistWithNA(json, 'type'),
