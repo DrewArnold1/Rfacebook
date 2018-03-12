@@ -72,7 +72,7 @@ getPage <- function(page, token, n=25, since=NULL, until=NULL, feed=FALSE, react
 	verbose=TRUE, api=NULL){
 
 	url <- paste0('https://graph.facebook.com/', page,
-		'/posts?fields=from,name,description,message,created_time,type,link,story,comments.summary(true)',
+		'/posts?fields=from,parent_id,name,description,message,created_time,type,link,story,comments.summary(true)',
 		',likes.summary(true),shares')
 	if (feed){
 		url <- paste0('https://graph.facebook.com/', page,
