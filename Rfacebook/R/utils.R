@@ -101,6 +101,9 @@ postDataToDF <- function(json){
 	df <- data.frame(
 		from_id = json$from$id,
 		from_name = json$from$name,
+		name = json$name,
+		description = json$description,
+		story = json$story,
 		message = ifelse(!is.null(json$message),json$message, NA),
 		created_time = json$created_time,
 		type = json$type,
